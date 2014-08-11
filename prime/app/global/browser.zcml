@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="prime.app.global">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <browser:page
+        name="prime-app-global"
+        for="OFS.interfaces.IApplication"
+        class=".viewtest.TestView"
+        template="templates/test-view.pt"
+        permission="zope2.AccessContentsInformation" />
+
+    <browser:page
+        name="yoursites"
+        for="OFS.interfaces.IApplication"
+        class=".viewplonesites.YourSitesView"
+        template="templates/plonesites-view.pt"
+        permission="zope2.AccessContentsInformation" />
+
+</configure>

@@ -1,0 +1,4 @@
+
+<div tal:repeat="site view/sites">
+    <span tal:content="site/id"></span>
+</div>

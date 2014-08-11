@@ -8,3 +8,4 @@ Views for OFS.interfaces.IApplication interface.
 Views
 ============
 @@prime-app-global
+@@yoursites

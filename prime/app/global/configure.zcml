@@ -6,11 +6,6 @@
 
     <five:registerPackage package="." initialize=".initialize" />
 
-    <browser:page
-        name="prime-app-global"
-        for="OFS.interfaces.IApplication"
-        class=".global.TestView"
-        template="templates/test-view.pt"
-        permission="zope2.AccessContentsInformation" />
+    <include file="browser.zcml" />
 
 </configure>
