@@ -2,5 +2,9 @@ Introduction
 ============
 
 
+global zope namespace.
+Views for OFS.interfaces.IApplication interface.
 
-This product may contain traces of nuts.
+Views
+============
+@@prime-app-global
