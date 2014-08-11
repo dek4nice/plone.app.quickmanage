@@ -13,7 +13,7 @@
         for="OFS.interfaces.IApplication"
         class=".viewtest.TestView"
         template="templates/test-view.pt"
-        permission="zope2.AccessContentsInformation" />
+        permission="cmf.ManagePortal" />
 
     <!-- @@yoursites -->
     <browser:page
@@ -21,7 +21,7 @@
         for="OFS.interfaces.IApplication"
         class=".viewplonesites.YourSitesView"
         template="templates/plonesites-view.pt"
-        permission="zope2.AccessContentsInformation" />
+        permission="cmf.ManagePortal" />
 
     <!-- @@dev-links -->
     <browser:page name="dev-links"
