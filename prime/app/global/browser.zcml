@@ -4,8 +4,10 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="prime.app.global">
 
-    <five:registerPackage package="." initialize=".initialize" />
+    <!-- ++resource++prime.app.global/ -->
+    <browser:resourceDirectory name="prime.app.global" directory="public" />
 
+    <!-- @@prime-app-global -->
     <browser:page
         name="prime-app-global"
         for="OFS.interfaces.IApplication"
@@ -13,11 +15,19 @@
         template="templates/test-view.pt"
         permission="zope2.AccessContentsInformation" />
 
+    <!-- @@yoursites -->
     <browser:page
         name="yoursites"
         for="OFS.interfaces.IApplication"
         class=".viewplonesites.YourSitesView"
         template="templates/plonesites-view.pt"
         permission="zope2.AccessContentsInformation" />
+
+    <!-- @@dev-links -->
+    <browser:page name="dev-links"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".viewdevlinks.DevelopSiteManageLinks"
+        template="templates/dev-links-template.pt"
+        permission="cmf.ManagePortal" />
 
 </configure>
