@@ -29,7 +29,8 @@ class DevelopSiteManageLinks(BrowserView):
         self.links2.append(('@@folder_contents' , 'contents'))
         self.links2.append(('@@manage-portlets' , 'portlets'))
         self.links2.append(('@@manage-viewlets' , 'viewlets'))
-        self.links2.append(('portal_registry' , 'registry'))
+        self.links2.append(('plone_control_panel' , 'control'))
+        self.links2.append(('portal_registry?q=prime' , 'registryprime'))
         # self.resp =  self.context.REQUEST.RESPONSE
 
     def render(self):

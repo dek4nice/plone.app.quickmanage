@@ -1,4 +1,12 @@
 
-<div tal:repeat="site view/sites">
-    <span tal:content="site/id"></span>
-</div>
+<div><a href="@@reload" title="reload">reload code</a></div>
+
+<div>@@dev-links</div>
+<h5>Sites</h5>
+<ul>
+    <li tal:repeat="site view/sites">
+        <span tal:content="site/id"></span>
+        [<a tal:attributes="href string:${site/absolute_url}/@@dev-links">dev</a>]
+        [<a tal:attributes="href string:${site/absolute_url}/manage">manage</a>]
+    </li>
+</ul>
