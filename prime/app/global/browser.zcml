@@ -23,6 +23,14 @@
         template="templates/plonesites-view.pt"
         permission="cmf.ManagePortal" />
 
+    <!-- @@sitestatus -->
+    <browser:page
+        name="sitestatus"
+        for="OFS.interfaces.IApplication"
+        class=".viewstatus.SiteStatusView"
+        template="templates/sitestatus-view.pt"
+        permission="zope2.View" />
+
     <!-- @@dev-links -->
     <browser:page name="dev-links"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
