@@ -18,12 +18,15 @@ class DevelopSiteManageLinks(BrowserView):
 
         self.links1.append(('manage_propertiesForm' , 'property'))
         self.links1.append(('portal_properties/manage_main' , 'properties'))
+        self.links1.append(('manage_UndoForm' , 'undo'))
+        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
+
         self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
         self.links1.append(('portal_types/manage_main' , 'types'))
-        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
-        self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
         self.links1.append(('portal_css/manage_cssComposition' , 'stylesheets'))
         self.links1.append(('portal_javascripts/manage_jsComposition' , 'javascripts'))
+
+        self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
 
         self.links2.append(('@@folder_contents' , 'contents'))
