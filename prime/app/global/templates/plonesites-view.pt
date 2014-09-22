@@ -1,12 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Your Sites Manage Interface</title>
+<link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++prime.app.global/base.css">
+</head>
+<body>
 
-<div><a href="@@reload" title="reload">reload code</a></div>
+    <h5>Zope actions</h5>
+    <ul>
+        <li><a href="manage" title="manage" target="_blank">manage</a></li>
+        <li><a href="@@reload?action=code" title="reload" target="_blank">reload code</a></li>
+        <li><a href="@@plone-addsite?site_id=Plone" title="add site" target="_blank">add site</a></li>
+        <li><a href="Control_Panel/DebugInfo/manage_main" title="debug" target="_blank">debug info</a></li>
+    </ul>
 
-<div>@@dev-links</div>
-<h5>Sites</h5>
-<ul>
-    <li tal:repeat="site view/sites">
-        <span tal:content="site/id"></span>
-        [<a tal:attributes="href string:${site/absolute_url}/@@dev-links">dev</a>]
-        [<a tal:attributes="href string:${site/absolute_url}/manage">manage</a>]
-    </li>
-</ul>
+    <h5>Sites</h5>
+    <ul>
+        <li tal:repeat="site view/sites">
+            <span tal:content="site/id"></span>
+            [<a tal:attributes="href string:${site/absolute_url}/@@dev-links" target="_blank">dev</a>]
+            [<a tal:attributes="href string:${site/absolute_url}/manage" target="_blank">manage</a>]
+        </li>
+    </ul>
+
+</body>
+</html>

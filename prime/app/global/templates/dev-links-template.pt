@@ -1,7 +1,8 @@
 <html>
     <head>
         <title>Dev Links</title>
-        <link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:${view/portal_url}/++resource++prime.app.global/developsitemanagelinks.css">
+        <link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++prime.app.global/base.css">
+        <link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++prime.app.global/developsitemanagelinks.css">
     </head>
     <body>
         <div class="manage-developsitelinks">
