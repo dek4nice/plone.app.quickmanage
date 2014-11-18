@@ -18,11 +18,20 @@
 
     <h5>Sites</h5>
     <ul>
-        <li tal:repeat="site view/sites">
-            <span tal:content="site/id"></span>
-            [<a tal:attributes="href string:${site/absolute_url}/@@dev-links" target="_blank">dev</a>]
-            [<a tal:attributes="href string:${site/absolute_url}/manage" target="_blank">manage</a>]
-        </li>
+        <table>
+            <tr tal:repeat="site view/sites">
+                <td>
+                    <li>
+                        <span tal:content="site/id"></span>
+                    </li>
+                </td>
+                <td>
+                    <tal:actions repeat="action view/siteactions">
+                        <a tal:attributes="href string:${site/absolute_url}/${action/url}" target="_blank" tal:content="action/title"></a>
+                    </tal:actions>
+                </td>
+            </tr>
+        </table>
     </ul>
 
 </body>

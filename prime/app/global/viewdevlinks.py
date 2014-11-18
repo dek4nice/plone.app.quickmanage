@@ -1,6 +1,7 @@
 from Products.Five.browser import BrowserView
 from zope.component import getUtility
 from Products.CMFCore.interfaces import ISiteRoot
+import urllib
 
 class DevelopSiteManageLinks(BrowserView):
 
@@ -19,13 +20,14 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('manage_propertiesForm' , 'property'))
         self.links1.append(('portal_properties/manage_main' , 'properties'))
         self.links1.append(('manage_UndoForm' , 'undo'))
-        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
+        self.links1.append((self.get_search_old_types_url() , 'oldsearch'))
 
-        self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
+        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
         self.links1.append(('portal_types/manage_main' , 'types'))
         self.links1.append(('portal_css/manage_cssComposition' , 'stylesheets'))
         self.links1.append(('portal_javascripts/manage_jsComposition' , 'javascripts'))
 
+        self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
         self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
 
@@ -34,7 +36,23 @@ class DevelopSiteManageLinks(BrowserView):
         self.links2.append(('@@manage-viewlets' , 'viewlets'))
         self.links2.append(('plone_control_panel' , 'control'))
         self.links2.append(('portal_registry?q=prime' , 'registryprime'))
+
         # self.resp =  self.context.REQUEST.RESPONSE
+
+    def get_search_old_types_url(self):
+        obj_metatypes = ['Controller Page Template', 'Folder', 'Controller Python Script', 'Controller Validator', 'Page Template', 'Script (Python)']
+        # [o.replace(' ','+') for o in obj_metatypes]
+        metatypes_args = ['obj_metatypes:list=' + urllib.quote(o) for o in obj_metatypes]
+        vars = {
+            'obj_ids:tokens' : '',
+            'obj_searchterm' : '',
+            'obj_mspec' : '<',
+            'obj_mtime' : '',
+            'search_sub:int' : '1',
+            'btn_submit' : 'Find'
+        }
+        other_args = [name + '=' + urllib.quote(value) for name , value in vars.items()]
+        return 'manage_findResult?' + '&'.join(metatypes_args + other_args)
 
     def render(self):
         return self.index()
