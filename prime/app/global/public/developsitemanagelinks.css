@@ -37,6 +37,9 @@
     float:left;
     border-collapse:collapse;
 }
+#manage-developsitelinks-portalurl {
+    padding: 2px 3px;
+}
 
 .manage-developsitelinks-cell a {
     display:block;
