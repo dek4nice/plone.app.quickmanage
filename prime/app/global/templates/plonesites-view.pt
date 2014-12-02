@@ -16,6 +16,7 @@
         <li><a href="Control_Panel/DebugInfo/manage_main" title="debug" target="_blank">debug info</a></li>
     </ul>
 
+    <tal:PloneSites condition="view/sites">
     <h5>Sites</h5>
     <ul>
         <table>
@@ -33,6 +34,14 @@
             </tr>
         </table>
     </ul>
+    </tal:PloneSites>
+
+    <tal:MailHost condition="view/mail_hosts_detected">
+    <h5>Mail Hosts</h5>
+    <ul>
+        <li tal:repeat="siteid view/mail_hosts_detected" tal:content="siteid"></li>
+    </ul>
+    </tal:MailHost>
 
 </body>
 </html>
