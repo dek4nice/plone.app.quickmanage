@@ -27,6 +27,7 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('portal_css/manage_cssComposition' , 'stylesheets'))
         self.links1.append(('portal_javascripts/manage_jsComposition' , 'javascripts'))
 
+        self.links1.append(('portal_actions/manage_workspace' , 'actions'))
         self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
         self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
