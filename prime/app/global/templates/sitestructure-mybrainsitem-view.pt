@@ -1,0 +1,8 @@
+<div>
+    <!-- {'review_state': 'published', 'meta_type': 'ATDocument', 'portal_type': 'Document', 'getId': 'front-page'} -->
+    <span tal:content="options/level"></span>
+    <a tal:attributes="href options/url" target="_blank">goto</a>
+    <span tal:content="options/type"></span>
+    <span tal:content="options/state"></span>
+    <span tal:content="options/id"></span>
+</div>

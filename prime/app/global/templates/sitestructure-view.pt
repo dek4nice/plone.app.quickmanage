@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Portal content structure</title>
+    <style type="text/css">
+        body {
+            font-size: 10pt;
+        }
+        div {
+        padding: 0px 0px 5px 0px;
+        }
+    </style>
+</head>
+
+    <body style="padding: 30px;">
+
+        <h3>Portal content structure</h3>
+        <div tal:content="structure python: view.walker_next(view.portal , -1)">walker init</div>
+
+    <div tal:content="python: view.types.listTypeTitles() "></div>
+    <div tal:content="python: view.types.getTypeInfo('Document').getIconExprObject() "></div>
+    <div tal:content="python: view.objects[0].getObject() "></div>
+
+    </body>
+
+</html>
