@@ -52,7 +52,6 @@
             <a tal:condition="view/is_full" tal:attributes="href string:${view/view_url}">Collapse root content nodes</a>
             <a tal:condition="not:view/is_full" tal:attributes="href string:${view/view_url}?all=1">Extend inner content nodes</a>
         </div>
-        <pre tal:condition="view/msg_all" tal:content="view/msg_all"></pre>
         <div tal:content="structure python: view.walker_next(view.portal , -1)">walker init</div>
 
         <div class="sitestructure-footer">
