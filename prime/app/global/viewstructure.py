@@ -6,21 +6,33 @@ from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.interfaces import ITypesTool
 
 class SiteStructureView(BrowserView):
-    """ @@prime-app-global view for root plone instance """
+    """ @@sitestructure view for root plone instance """
 
+    __name__ = 'sitestructure'
     level = 0
+    msg_all = ''
 
-    def __call__(self):
+    def __call__(self,all=False):
+        if not all:
+            self.msg_all += u'This shows only root content!\n\n'
+
         self.update()
         return self.render()
 
     def update(self):
         self.site = None
-        self.portal = getUtility(ISiteRoot)
+        # self.portal = getUtility(ISiteRoot)
+        self.portal = self.context.portal_url.getPortalObject()
+        portal_url = self.portal.absolute_url()
+        # portal_url = self.portal.portal_url()
         # self.types = getUtility(ITypesTool)
+        if self.msg_all:
+            url1 = '{0}/@@{1}?all=1'.format(portal_url , self.__name__)
+            self.msg_all += u'Show all content now:\n{0}'.format(url1)
         self.types = getToolByName(self.context, 'portal_types')
         self.catalog = getToolByName(self.context, 'portal_catalog')
         self.filter_provides = 'Products.CMFCore.interfaces._content.IContentish'
+        return
         contentFilter = {
             'meta_type' : 'Cart Item' ,
             'review_state' : ['published','visible'] ,
@@ -46,7 +58,8 @@ class SiteStructureView(BrowserView):
             contentish_next = zcatalogbrain_next.getObject()
             # out.append(str(contentish_next))
             out.append(self.render_item(zcatalogbrain_next , level))
-            # out.append(self.walker_next(contentish_next , level))
+            if not self.msg_all:
+                out.append(self.walker_next(contentish_next , level))
         return "\n".join(out)
 
     def getZCatalogBrainObjects(self , path):
@@ -65,7 +78,8 @@ class SiteStructureView(BrowserView):
         state = "[%s]" % item.review_state
         id = "(%s)" % item.getId
         url = item.getURL()
-        return self.mybrainsitem_template(type=type , state=state , id=id , level=level , url=url)
+        title = item.Title
+        return self.mybrainsitem_template(type=type , state=state , id=id , level=level , url=url , title=title)
 
     def render(self):
         # return self.walker_next(self.portal , -1)

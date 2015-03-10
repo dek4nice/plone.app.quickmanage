@@ -6,7 +6,11 @@
     </head>
     <body class="manage-developsitelinks">
         <div class="manage-developsitelinks-wrapper">
-            <h3><a tal:attributes="href string:${view/portal_url}/manage" target="_blank">Zope</a></h3>
+            <h3>
+                <a tal:attributes="href string:${view/portal_url}/manage" target="_blank">Zope</a> ,
+                <a tal:attributes="href view/portal_url" target="_blank">Plone</a> ,
+                <a tal:attributes="href string:${view/portal_url}/@@sitestructure" target="_blank">Structure</a>
+            </h3>
             <div class="manage-developsitelinks-container">
                 <div class="manage-developsitelinks-cell" tal:repeat="link view/links1">
                     <a tal:content="python:link[1]" tal:attributes="href python: view.portal_url + '/' + link[0];" target="_blank">Link Title</a>
@@ -14,7 +18,8 @@
                 <span><!-- clearing --></span>
             </div>
             <h3>
-                <a tal:attributes="href view/portal_url" target="_blank">Plone</a>
+            </h3>
+            <h3>
                 <input type="text" readonly="1" tal:attributes="value view/portal_url" name="portal_url" maxlength="50" size="50" id="manage-developsitelinks-portalurl" />
             </h3>
             <div class="manage-developsitelinks-container">

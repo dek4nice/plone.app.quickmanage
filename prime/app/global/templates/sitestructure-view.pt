@@ -5,10 +5,25 @@
     <title>Portal content structure</title>
     <style type="text/css">
         body {
-            font-size: 10pt;
+            font-size: 12pt;
         }
-        div {
-        padding: 0px 0px 5px 0px;
+        .sitestructure-item {
+            padding: 0px 0px 5px 0px;
+        }
+        .sitestructure-item-actions {
+        }
+        .sitestructure-item-actions a {
+            color:#00F;
+            font-weight: bold;
+        }
+        .sitestructure-item-actions a:hover {
+            color:#000;
+        }
+        .sitestructure-item-type {
+        }
+        .sitestructure-item-state {
+        }
+        .sitestructure-item-id {
         }
     </style>
 </head>
@@ -16,11 +31,9 @@
     <body style="padding: 30px;">
 
         <h3>Portal content structure</h3>
+        <pre tal:condition="view/msg_all" tal:content="view/msg_all"></pre>
         <div tal:content="structure python: view.walker_next(view.portal , -1)">walker init</div>
 
-    <div tal:content="python: view.types.listTypeTitles() "></div>
-    <div tal:content="python: view.types.getTypeInfo('Document').getIconExprObject() "></div>
-    <div tal:content="python: view.objects[0].getObject() "></div>
 
     </body>
 
