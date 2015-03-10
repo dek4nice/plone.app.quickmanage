@@ -2,15 +2,12 @@
     <!-- {'review_state': 'published', 'meta_type': 'ATDocument', 'portal_type': 'Document', 'getId': 'front-page'} -->
     <span tal:content="options/level"></span>
     <span class="sitestructure-item-actions">
-        [
         <a tal:attributes="href string:${options/url}/" target="_blank">goto</a>
         <a tal:attributes="href string:${options/url}/manage_workspace" target="_blank">mng</a>
         <a tal:attributes="href string:${options/url}/manage_interfaces" target="_blank">infc</a>
         <a tal:attributes="href string:${options/url}/manage_propertiesForm" target="_blank">prop</a>
-        ]
     </span>
+    <span class="sitestructure-item-id" tal:content="options/id"></span>
     <span class="sitestructure-item-type" tal:content="options/type"></span>
     <span class="sitestructure-item-state" tal:content="options/state"></span>
-    <span class="sitestructure-item-id" tal:content="options/id"></span>
 </div>
-catalog_index_blocks

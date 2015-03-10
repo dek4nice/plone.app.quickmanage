@@ -10,11 +10,11 @@ class SiteStructureView(BrowserView):
 
     __name__ = 'sitestructure'
     level = 0
-    msg_all = ''
+    is_full = False
 
     def __call__(self,all=False):
-        if not all:
-            self.msg_all += u'This shows only root content!\n\n'
+        if all:
+            self.is_full = True
 
         self.update()
         return self.render()
@@ -26,9 +26,7 @@ class SiteStructureView(BrowserView):
         portal_url = self.portal.absolute_url()
         # portal_url = self.portal.portal_url()
         # self.types = getUtility(ITypesTool)
-        if self.msg_all:
-            url1 = '{0}/@@{1}?all=1'.format(portal_url , self.__name__)
-            self.msg_all += u'Show all content now:\n{0}'.format(url1)
+        self.view_url = '{0}/@@{1}'.format(portal_url , self.__name__)
         self.types = getToolByName(self.context, 'portal_types')
         self.catalog = getToolByName(self.context, 'portal_catalog')
         self.filter_provides = 'Products.CMFCore.interfaces._content.IContentish'
@@ -58,7 +56,7 @@ class SiteStructureView(BrowserView):
             contentish_next = zcatalogbrain_next.getObject()
             # out.append(str(contentish_next))
             out.append(self.render_item(zcatalogbrain_next , level))
-            if not self.msg_all:
+            if self.is_full:
                 out.append(self.walker_next(contentish_next , level))
         return "\n".join(out)
 

@@ -7,13 +7,21 @@
         body {
             font-size: 12pt;
         }
+        .sitestructure-header {
+            color: #777777;
+            margin-bottom: 1em;
+        }
+        .sitestructure-header h3 {
+            margin: 0px;
+            padding: 0px;
+        }
         .sitestructure-item {
             padding: 0px 0px 5px 0px;
         }
         .sitestructure-item-actions {
         }
         .sitestructure-item-actions a {
-            color:#00F;
+            color:#33E;
             font-weight: bold;
         }
         .sitestructure-item-actions a:hover {
@@ -24,16 +32,32 @@
         .sitestructure-item-state {
         }
         .sitestructure-item-id {
+            font-weight:bold;
+        }
+        .sitestructure-footer {
+            padding-top: 4em;
+            font-size: 75%;
+            color: #666;
         }
     </style>
 </head>
 
     <body style="padding: 30px;">
 
-        <h3>Portal content structure</h3>
+        <div class="sitestructure-header">
+            <h3 tal:condition="not:view/is_full">Only root content structure</h3>
+            <h3 tal:condition="view/is_full">Full content structure tree</h3>
+            <span tal:condition="not:view/is_full">+</span>
+            <span tal:condition="view/is_full">-</span>
+            <a tal:condition="view/is_full" tal:attributes="href string:${view/view_url}">Collapse root content nodes</a>
+            <a tal:condition="not:view/is_full" tal:attributes="href string:${view/view_url}?all=1">Extend inner content nodes</a>
+        </div>
         <pre tal:condition="view/msg_all" tal:content="view/msg_all"></pre>
         <div tal:content="structure python: view.walker_next(view.portal , -1)">walker init</div>
 
+        <div class="sitestructure-footer">
+            <span>prime.app.global@@sitestructure</span>
+        </div>
 
     </body>
 
