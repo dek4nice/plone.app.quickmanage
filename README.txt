@@ -1,8 +1,11 @@
 Introduction!
 ============
 
-global zope namespace.
-Views for OFS.interfaces.IApplication interface.
+Product simplifies access to basic manage-views.
+
+In a lot sites for instance we can quickly check settings in all of them.
+
+Views registered for **OFS.interfaces.IApplication** and **Products.CMFCore.interfaces.ISiteRoot** interfaces.
 
 
 Views
@@ -19,7 +22,7 @@ Views
  quick access to most frequently attended controls
 
 * **@@sitestructure**
- [mx39EC7.png](https://bitbucket.org/repo/boqkap/images/3610486914-mx39EC7.png)
+ (https://bitbucket.org/repo/boqkap/images/3610486914-mx39EC7.png)
 
- site content structure.
- only required fields are shown
+ Site content structure.
+ Only required fields are shown.
