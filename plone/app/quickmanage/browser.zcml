@@ -39,11 +39,11 @@
         template="templates/sitestructure-view.pt"
         permission="zope2.View" />
 
-    <!-- @@dev-links -->
-    <browser:page name="dev-links"
+    <!-- @@quickdev -->
+    <browser:page name="quickdev"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         class=".viewdevlinks.DevelopSiteManageLinks"
-        template="templates/dev-links-template.pt"
+        template="templates/dev-quick-template.pt"
         permission="cmf.ManagePortal" />
 
 </configure>

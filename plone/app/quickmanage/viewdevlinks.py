@@ -5,6 +5,7 @@ import urllib
 
 class DevelopSiteManageLinks(BrowserView):
 
+    """ @@quickdev """
 
     def __call__(self):
         self.update()
