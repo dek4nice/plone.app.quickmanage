@@ -4,8 +4,8 @@ class YourSitesView(BrowserView):
     """ @@prime-app-global view for root plone instance """
 
     actions = [
-        ('dev' , '@@quickdev'),
-        ('manage' , 'manage'),
+        # ('dev' , '@@quickdev'), #moved to link-href attribute
+        ('MNG' , 'manage'),
         ('QI' , 'portal_quickinstaller/manage_workspace'),
         ('FC' , '@@folder_contents'),
     ]

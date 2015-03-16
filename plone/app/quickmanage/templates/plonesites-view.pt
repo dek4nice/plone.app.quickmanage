@@ -24,7 +24,9 @@
             <tr tal:repeat="site view/sites">
                 <td>
                     <li>
-                        <span tal:content="site/id"></span>
+                        <a tal:attributes="href string:${site/absolute_url}/@@quickdev" target="_blank">
+                            <span tal:content="site/id"></span>
+                        </a>
                     </li>
                 </td>
                 <td>
