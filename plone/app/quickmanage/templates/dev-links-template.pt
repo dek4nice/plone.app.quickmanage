@@ -29,5 +29,9 @@
                 <span><!-- clearing --></span>
             </div>
         </div>
+        <div class="plone-app-quickmanage-footer">
+            <span>plone.app.quickmanage@@dev-links</span>
+        </div>
+
     </body>
 </html>

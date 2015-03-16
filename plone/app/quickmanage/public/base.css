@@ -1,10 +1,19 @@
 /*
 body bgcolor="#ffffff" link="#000099" alink="#000099" vlink="#000099"
 font face="verdana, helvetica, sans-serif" size="2" color="#333333" */
+
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     color: #333333;
+    /*font-size: 12pt;*/
 }
+
 li {
     margin-bottom: 0.3em;
+}
+
+.plone-app-quickmanage-footer {
+    padding-top: 4em;
+    font-size: 75%;
+    color: #666;
 }

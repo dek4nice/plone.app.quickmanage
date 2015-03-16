@@ -1,0 +1,33 @@
+
+.sitestructure-header {
+    color: #777777;
+    margin-bottom: 1em;
+}
+.sitestructure-header h3 {
+    margin: 0px;
+    padding: 0px;
+}
+.sitestructure-body {
+    font-size:10pt;
+}
+.sitestructure-item {
+    padding: 0px 0px 5px 0px;
+}
+.sitestructure-item-actions {
+}
+.sitestructure-item-actions a {
+    color:#33E;
+    font-weight: bold;
+}
+.sitestructure-item-actions a:hover {
+    color:#000;
+}
+.sitestructure-item-type {
+}
+.sitestructure-item-state {
+}
+.sitestructure-item-id {
+    font-weight:bold;
+}
+.sitestructure-footer {
+}
