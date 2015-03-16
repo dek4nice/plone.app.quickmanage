@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Your Sites Manage Interface</title>
-<link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++prime.app.global/base.css">
+<link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++plone.app.quickmanage/base.css">
 </head>
 <body>
 

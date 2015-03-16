@@ -55,7 +55,7 @@
         <div tal:content="structure python: view.walker_next(view.portal , -1)">walker init</div>
 
         <div class="sitestructure-footer">
-            <span>prime.app.global@@sitestructure</span>
+            <span>plone.app.quickmanage@@sitestructure</span>
         </div>
 
     </body>

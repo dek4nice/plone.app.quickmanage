@@ -1,8 +1,8 @@
-prime.app.global Installation
+plone.app.quickmanage Installation
 =======================
 
  * When you're reading this you have probably already run
-   ``easy_install prime.app.global``. Find out how to install setuptools
+   ``easy_install plone.app.quickmanage``. Find out how to install setuptools
    (and EasyInstall) here:
    http://peak.telecommunity.com/DevCenter/EasyInstall
 
@@ -12,24 +12,24 @@ prime.app.global Installation
 
    into your Zope instance.
 
- * Create a file called ``prime.app.global-configure.zcml`` in the
+ * Create a file called ``plone.app.quickmanage-configure.zcml`` in the
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
-       <include package="prime.app.global" />
+       <include package="plone.app.quickmanage" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
- * Add ``prime.app.global`` to the list of eggs to install, e.g.:
+ * Add ``plone.app.quickmanage`` to the list of eggs to install, e.g.:
 
     [buildout]
     ...
     eggs =
         ...
-        prime.app.global
+        plone.app.quickmanage
 
   * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
@@ -37,7 +37,7 @@ recipe to manage your project, you can do this:
     recipe = plone.recipe.zope2instance
     ...
     zcml =
-        prime.app.global
+        plone.app.quickmanage
 
   * Re-run buildout, e.g. with:
 

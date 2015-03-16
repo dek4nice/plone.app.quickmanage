@@ -3,9 +3,9 @@ import os
 
 version = '1.0'
 
-setup(name='prime.app.global',
+setup(name='plone.app.quickmanage',
       version=version,
-      description="Global Prime Views",
+      description="Simplified access to basic plone manage-views",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -17,10 +17,10 @@ setup(name='prime.app.global',
       keywords='zope view',
       author='Dek4nice',
       author_email='admin911@list.ru',
-      url='https://bitbucket.org/studio-web/prime.app.global',
+      url='http://bitbucket.org/studio-web/prime.app.global',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['prime', 'prime.app'],
+      namespace_packages=['plone', 'plone.app'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[

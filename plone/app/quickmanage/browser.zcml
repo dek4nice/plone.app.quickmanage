@@ -2,10 +2,10 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="prime.app.global">
+    i18n_domain="plone.app.quickmanage">
 
-    <!-- ++resource++prime.app.global/ -->
-    <browser:resourceDirectory name="prime.app.global" directory="public" />
+    <!-- ++resource++plone.app.quickmanage/ -->
+    <browser:resourceDirectory name="plone.app.quickmanage" directory="public" />
 
     <!-- @@prime-app-global -->
     <browser:page
