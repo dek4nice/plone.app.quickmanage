@@ -6,9 +6,9 @@
     </head>
     <body class="manage-developsitelinks">
         <div class="manage-developsitelinks-wrapper">
+
             <h3>
                 <a tal:attributes="href string:${view/portal_url}/manage" target="_blank">Zope</a> ,
-                <a tal:attributes="href view/portal_url" target="_blank">Plone</a> ,
                 <a tal:attributes="href string:${view/portal_url}/@@sitestructure" target="_blank">Structure</a>
             </h3>
             <div class="manage-developsitelinks-container">
@@ -17,9 +17,9 @@
                 </div>
                 <span><!-- clearing --></span>
             </div>
+
             <h3>
-            </h3>
-            <h3>
+                <a tal:attributes="href view/portal_url" target="_blank">Plone</a> ,
                 <input type="text" readonly="1" tal:attributes="value view/portal_url" name="portal_url" maxlength="50" size="50" id="manage-developsitelinks-portalurl" />
             </h3>
             <div class="manage-developsitelinks-container">
@@ -28,6 +28,27 @@
                 </div>
                 <span><!-- clearing --></span>
             </div>
+
+            <h3>
+                <a tal:attributes="href string:${view/portal_url}/@@overview-controlpanel">plone control panel</a>
+            </h3>
+            <div class="manage-developsitelinks-container">
+                <!-- plone/app/controlpanel/overview.pt code part -->
+                <ul class="configlets" tal:repeat="sublist view/plone_sublist">
+                    <tal:actions tal:repeat="action sublist">
+                    <li tal:condition="action/visible">
+                        <a href=""
+                            tal:define="icon action/icon"
+                            tal:attributes="href action/url">
+                            <img src="" alt="" tal:condition="not:icon" tal:attributes="src string:${view/portal_url}/maintenance_icon.png" />
+                            <img src="" alt="" tal:condition="icon"     tal:attributes="src icon; alt action/title;" i18n:attributes="alt" />
+                            <tal:title tal:content="action/title" i18n:translate="">Title</tal:title>
+                        </a>
+                    </li>
+                    </tal:actions>
+                </ul>
+            </div>
+
         </div>
         <div class="plone-app-quickmanage-footer">
             <span>plone.app.quickmanage@@quickdev</span>

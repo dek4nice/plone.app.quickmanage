@@ -1,6 +1,7 @@
 from Products.Five.browser import BrowserView
 from zope.component import getUtility
 from Products.CMFCore.interfaces import ISiteRoot
+from zope.component import getMultiAdapter
 import urllib
 
 class DevelopSiteManageLinks(BrowserView):
@@ -36,10 +37,12 @@ class DevelopSiteManageLinks(BrowserView):
         self.links2.append(('@@folder_contents' , 'contents'))
         self.links2.append(('@@manage-portlets' , 'portlets'))
         self.links2.append(('@@manage-viewlets' , 'viewlets'))
-        self.links2.append(('plone_control_panel' , 'control'))
         self.links2.append(('portal_registry?q=prime' , 'registryprime'))
         self.links2.append(('@@dexterity-types' , 'dexterity'))
 
+        # plone/app/controlpanel/overview.py
+        overview_state = getMultiAdapter((self.context, self.request), name=u'overview-controlpanel')
+        self.plone_sublist = overview_state.sublists('Plone')
         # self.resp =  self.context.REQUEST.RESPONSE
 
     def get_search_old_types_url(self):

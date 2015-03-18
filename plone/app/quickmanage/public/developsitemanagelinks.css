@@ -1,13 +1,13 @@
 
 .manage-developsitelinks {
-    font-size:12pt;
+    font-size:10pt;
 }
 .manage-developsitelinks-wrapper {
     background-color:#f0f0f0;
     padding:1em;
 }
 .manage-developsitelinks-container {
-    width: 40em;    /* manage-developsitelinks-cell x 4 */
+    width: 60em;    /* manage-developsitelinks-cell x 6 */
     display: table;
     padding-bottom: 2em;
 }
@@ -40,7 +40,14 @@
 #manage-developsitelinks-portalurl {
     padding: 2px 3px;
 }
-
+.manage-developsitelinks-container .configlets {
+    float: left;
+    list-style: outside none none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 19em; /* ~60/3 */
+    padding-left:1em;
+}
 .manage-developsitelinks-cell a {
     display:block;
     display:table-cell;
@@ -59,6 +66,8 @@
     border-color: #aaaaaa;
     text-align:center;
     vertical-align:middle;
+
+    font-size: 12pt;
 }
 .manage-developsitelinks-cell a:hover {
     /*border-left:2px solid #555555;*/
