@@ -4,6 +4,7 @@ Changelog
 1.1 (dev)
 -------------------
 
+- new @@quickdev section: @@overview-controlpanel analog
 
 1.0
 -------------------

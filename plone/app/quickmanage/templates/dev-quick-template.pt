@@ -37,7 +37,7 @@
                 <ul class="configlets" tal:repeat="sublist view/plone_sublist">
                     <tal:actions tal:repeat="action sublist">
                     <li tal:condition="action/visible">
-                        <a href=""
+                        <a href="" target="_blank"
                             tal:define="icon action/icon"
                             tal:attributes="href action/url">
                             <img src="" alt="" tal:condition="not:icon" tal:attributes="src string:${view/portal_url}/maintenance_icon.png" />
