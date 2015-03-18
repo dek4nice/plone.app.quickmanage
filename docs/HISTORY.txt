@@ -1,6 +1,12 @@
 Changelog
 =========
 
+TODO
+-------------------
+- footer version
+- registry actions storage mechanizm
+
+
 1.1 (dev)
 -------------------
 
