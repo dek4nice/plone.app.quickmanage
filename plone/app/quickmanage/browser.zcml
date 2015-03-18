@@ -42,7 +42,7 @@
     <!-- @@quickdev -->
     <browser:page name="quickdev"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        class=".viewdevlinks.DevelopSiteManageLinks"
+        class=".view_quickdev.DevelopSiteManageLinks"
         template="templates/dev-quick-template.pt"
         permission="cmf.ManagePortal" />
 

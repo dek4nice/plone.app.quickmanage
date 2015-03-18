@@ -16,8 +16,18 @@ Views
 
  plone objects list with @@dev-links links
 
-* **@@dev-links**
+* **@@quickdev**
  (https://bitbucket.org/repo/boqkap/images/1310289825-mx32AEF.png)
+
+**oldsearch**
+ (http://cs624131.vk.me/v624131840/23698/Oo4TL51UG2k.jpg)
+ search in the portal objects with certain types:
+ * Controller Page Template
+ * Folder
+ * Controller Python Script
+ * Controller Validator
+ * Page Template
+ * Script Python
 
  quick access to most frequently attended controls
 
