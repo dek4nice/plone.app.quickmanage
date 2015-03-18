@@ -1,7 +1,21 @@
 Changelog
 =========
 
-1.0dev (unreleased)
+1.1 (dev)
 -------------------
+
+
+1.0
+-------------------
+
+- new view: plonesite/@@sitestructure
+
+- action: oldsearch
+
+- new view: plonesite/@@quickdev
+
+- new view: zopeinstance/@@yoursites
+
+- new view: zopeinstance/@@sitestatus
 
 - Initial release

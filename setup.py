@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '1.1'
 
 setup(name='plone.app.quickmanage',
       version=version,
@@ -25,6 +25,7 @@ setup(name='plone.app.quickmanage',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.controlpanel',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
