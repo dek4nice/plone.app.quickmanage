@@ -7,6 +7,9 @@
     <!-- ++resource++plone.app.quickmanage/ -->
     <browser:resourceDirectory name="plone.app.quickmanage" directory="public" />
 
+    <!-- Plone 4.1 compatability -->
+    <include package="Products.CMFCore"  file="permissions.zcml" />
+
     <!-- @@prime-app-global -->
     <browser:page
         name="prime-app-global"
