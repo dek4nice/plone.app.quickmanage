@@ -7,9 +7,9 @@
     padding:1em;
 }
 .manage-developsitelinks-container {
-    width: 60em;    /* manage-developsitelinks-cell x 6 */
+    width: 700px;    /* manage-developsitelinks-cell x 5 */
     display: table;
-    padding-bottom: 2em;
+    padding-bottom: 25px;
 }
 .manage-developsitelinks a {
     color: #4b84cb;
@@ -20,22 +20,21 @@
     /*text-decoration:underline;*/
 }
 .manage-developsitelinks h3 {
-    font-size:12pt;
-    padding-top:1em;
-    display:block;
+    font-size: 14px;
+    display: block;
     font-weight: normal;
-    margin:0px;
-    padding:0 0 0.5em 0;
+    margin: 0px;
+    padding: 0 0 6px 0; /* font-size * 0.4 */
 }
 .manage-developsitelinks span {
     clear:left;
 }
 .manage-developsitelinks-cell {
-    display:block;
-    width:10em;
-    height:10em;
-    float:left;
-    border-collapse:collapse;
+    display: block;
+    width: 140px;
+    height: 100px;
+    float: left;
+    border-collapse: collapse;
 }
 #manage-developsitelinks-portalurl {
     padding: 2px 3px;
@@ -45,8 +44,8 @@
     list-style: outside none none;
     margin-left: 0;
     margin-right: 0;
-    width: 19em; /* ~60/3 */
-    padding-left:1em;
+    width: 220px; /* ~700/3 */
+    padding-left: 14px;
 }
 .manage-developsitelinks-cell a {
     display:block;
@@ -56,18 +55,16 @@
 
     margin-left:1em;
     margin-bottom:4px;
-    padding-left:2px;
-    padding-top:2px;
-    padding-bottom:2px;
+    padding: 2px 2px 2px 2px;
 
-    /*border-bottom:2px solid #aaaaaa;*/
-    border-width: 2px 2px 2px 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: #aaaaaa;
     text-align:center;
     vertical-align:middle;
 
-    font-size: 12pt;
+    /* base font-size em */
+    font-size: 14px;
 }
 .manage-developsitelinks-cell a:hover {
     /*border-left:2px solid #555555;*/
