@@ -30,6 +30,7 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('portal_javascripts/manage_jsComposition' , 'javascripts'))
 
         self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
+        self.links1.append(('error_log/manage_main' , 'errors'))
         self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
 
