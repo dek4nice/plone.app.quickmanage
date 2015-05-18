@@ -36,6 +36,7 @@ class DevelopSiteManageLinks(BrowserView):
 
         self.links1.append(('portal_view_customizations/registrations.html' , 'views'))
         self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
+        self.links1.append(('portal_skins/custom/manage_main' , 'custom'))
 
         self.links2.append(('@@folder_contents?show_all=true' , 'contents'))
         self.links2.append(('@@manage-portlets' , 'portlets'))
