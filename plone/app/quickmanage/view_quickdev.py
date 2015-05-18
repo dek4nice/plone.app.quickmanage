@@ -34,7 +34,7 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
 
-        self.links2.append(('@@folder_contents' , 'contents'))
+        self.links2.append(('@@folder_contents?show_all=true' , 'contents'))
         self.links2.append(('@@manage-portlets' , 'portlets'))
         self.links2.append(('@@manage-viewlets' , 'viewlets'))
         self.links2.append(('portal_registry?q=prime' , 'registryprime'))
