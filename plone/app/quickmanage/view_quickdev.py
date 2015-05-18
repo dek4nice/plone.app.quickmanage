@@ -24,15 +24,16 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('manage_UndoForm' , 'undo'))
         self.links1.append((self.get_search_old_types_url() , 'oldsearch'))
 
-        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
+        self.links1.append(('portal_actions/manage_workspace' , 'actions'))
         self.links1.append(('portal_types/manage_main' , 'types'))
         self.links1.append(('portal_css/manage_cssComposition' , 'stylesheets'))
         self.links1.append(('portal_javascripts/manage_jsComposition' , 'javascripts'))
 
-        self.links1.append(('portal_actions/manage_workspace' , 'actions'))
         self.links1.append(('portal_catalog/manage_catalogView' , 'catalog'))
-        self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
+        self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
+
+        self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
 
         self.links2.append(('@@folder_contents?show_all=true' , 'contents'))
         self.links2.append(('@@manage-portlets' , 'portlets'))
