@@ -34,6 +34,7 @@ class DevelopSiteManageLinks(BrowserView):
         self.links1.append(('portal_setup/manage_importSteps' , 'setup'))
         self.links1.append(('portal_quickinstaller/manage_workspace' , 'quickinstaller'))
 
+        self.links1.append(('portal_view_customizations/registrations.html' , 'views'))
         self.links1.append(('portal_skins/manage_propertiesForm' , 'skins'))
 
         self.links2.append(('@@folder_contents?show_all=true' , 'contents'))
