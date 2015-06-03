@@ -30,7 +30,7 @@
             </div>
 
             <h3>
-                <a tal:attributes="href string:${view/portal_url}/@@overview-controlpanel">plone control panel</a>
+                <a tal:attributes="href string:${view/portal_url}/@@overview-controlpanel" target="_blank">plone control panel</a>
             </h3>
             <div class="manage-developsitelinks-container">
                 <!-- plone/app/controlpanel/overview.pt code part -->
