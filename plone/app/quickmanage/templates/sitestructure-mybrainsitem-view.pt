@@ -2,6 +2,7 @@
     <!-- {'review_state': 'published', 'meta_type': 'ATDocument', 'portal_type': 'Document', 'getId': 'front-page'} -->
     <span tal:content="options/level"></span>
     <span class="sitestructure-item-actions">
+        <a tal:attributes="href string:${options/url}/@@sitestructure">node</a>
         <a tal:attributes="href string:${options/url}/folder_contents" target="_blank">fcnt</a>
         <a tal:attributes="href string:${options/url}/" target="_blank">open</a>
         <a tal:attributes="href string:${options/url}/edit" target="_blank">edit</a>
