@@ -68,13 +68,13 @@ class SiteStructureView(BrowserView):
     mybrainsitem_template = ViewPageTemplateFile('templates/sitestructure-mybrainsitem-view.pt')
     def render_item(self,item , level=0):
         # "%s/%s [%s] (%s)" % (portal_type, meta_type, review_state, getId)
-        level = '|---' * level
+        level_string = '|---' * level
         type = "%s / %s" % (item.portal_type, item.meta_type)
-        state = "[%s]" % item.review_state
-        id = "(%s)" % item.getId
+        state = item.review_state
+        id = item.getId
         url = item.getURL()
-        title = item.Title
-        return self.mybrainsitem_template(type=type , state=state , id=id , level=level , url=url , title=title)
+        title = str(item.Title)
+        return self.mybrainsitem_template(type=type , state=state , id=id , level=level , level_string=level_string , url=url , title=title)
 
     def render(self):
         # return self.walker_next(self.context , -1)

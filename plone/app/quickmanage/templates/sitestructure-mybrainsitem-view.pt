@@ -1,18 +1,35 @@
-<div class="sitestructure-item">
+<div class="sitestructure-item row">
     <!-- {'review_state': 'published', 'meta_type': 'ATDocument', 'portal_type': 'Document', 'getId': 'front-page'} -->
-    <span tal:content="options/level"></span>
-    <span class="sitestructure-item-actions">
-        <a tal:attributes="href string:${options/url}/@@sitestructure">node</a>
-        <a tal:attributes="href string:${options/url}/folder_contents" target="_blank">fcnt</a>
-        <a tal:attributes="href string:${options/url}/" target="_blank">open</a>
-        <a tal:attributes="href string:${options/url}/edit" target="_blank">edit</a>
-        .
-        <a tal:attributes="href string:${options/url}/manage_workspace" target="_blank">mng</a>
-        <a tal:attributes="href string:${options/url}/manage_interfaces" target="_blank">infc</a>
-        <a tal:attributes="href string:${options/url}/manage_propertiesForm" target="_blank">prop</a>
-        .
+
+    <span class="btn-group btn-group-sm">
+        <a tal:attributes="href string:${options/url}/@@sitestructure" class="btn btn-primary">node</a>
+        <a tal:attributes="href string:${options/url}/folder_contents" class="btn btn-default" target="_blank">fcnt</a>
+        <a tal:attributes="href string:${options/url}/" class="btn btn-default" target="_blank">open</a>
+        <a tal:attributes="href string:${options/url}/edit" class="btn btn-default" target="_blank">edit</a>
     </span>
-    <span class="sitestructure-item-id" tal:content="options/id"></span>
-    <span class="sitestructure-item-type" tal:content="options/type"></span>
-    <span class="sitestructure-item-state" tal:content="options/state"></span>
+    <span class="btn-group btn-group-sm">
+        <a tal:attributes="href string:${options/url}/manage_workspace" class="btn btn-default" target="_blank">mng</a>
+        <a tal:attributes="href string:${options/url}/manage_interfaces" class="btn btn-default" target="_blank">infc</a>
+        <a tal:attributes="href string:${options/url}/manage_propertiesForm" class="btn btn-default" target="_blank">prop</a>
+    </span>
+
+    <span tal:content="options/level_string">
+        <tal:off replace="nothing">
+        <tal:level repeat="dummy python: range(options['level'])">
+            <span class="glyphicon glyphicon-option-vertical"></span>
+            <span class="glyphicon glyphicon-option-horizontal"></span>
+        </tal:level>
+        </tal:off>
+    </span>
+
+    <span>
+        <span class="sitestructure-item-id form-control-static" tal:content="options/id"></span>
+    </span>
+
+    <span class="btn-group">
+        <span class="sitestructure-item-type label label-warning" tal:content="options/type"></span>
+        <span class="sitestructure-item-state label label-default" tal:content="options/state"></span>
+    </span>
+
 </div>
+<!-- я -->

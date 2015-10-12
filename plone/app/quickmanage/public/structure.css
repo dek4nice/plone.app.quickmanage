@@ -31,3 +31,10 @@
 }
 .sitestructure-footer {
 }
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 3px 6px;
+}
+.btn-info {
+    background-color: #A1A1A1;
+}

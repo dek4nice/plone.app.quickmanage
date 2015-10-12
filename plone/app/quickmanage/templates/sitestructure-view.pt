@@ -4,6 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Portal content structure</title>
 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+    body {
+        font-family:'Open Sans';
+        font-size:12pt;
+    }
+    </style>
+
     <link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++plone.app.quickmanage/base.css">
     <link media="screen" type="text/css" rel="stylesheet" tal:attributes="href string:/++resource++plone.app.quickmanage/structure.css">
 
@@ -12,14 +28,14 @@
     <body style="padding: 30px;">
 
         <div class="sitestructure-header">
-            <h3 tal:condition="not:view/is_full">Only root content structure</h3>
-            <h3 tal:condition="view/is_full">Full content structure tree</h3>
+            <h2 tal:condition="not:view/is_full">Only root content structure</h2>
+            <h2 tal:condition="view/is_full">Full content structure tree</h2>
             <div tal:condition="view/is_full" class="sitestructure-block-root">
-                <span>-</span>
+                <span class="glyphicon glyphicon-minus"></span>
                 <a tal:attributes="href string:${view/view_url}">Collapse root content nodes</a>
             </div>
             <div tal:condition="not:view/is_full" class="sitestructure-block-inner">
-                <span>+</span>
+                <span class="glyphicon glyphicon-plus"></span>
                 <a tal:attributes="href string:${view/view_url}?all=1">Extend inner content nodes</a>
             </div>
             <div tal:condition="python: context.Type() != 'Plone Site'" class="sitestructure-block-aqparent">
