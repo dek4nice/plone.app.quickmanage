@@ -22,11 +22,8 @@ class SiteStructureView(BrowserView):
     def update(self):
         self.site = None
         # self.portal = getUtility(ISiteRoot)
-        self.portal = self.context.portal_url.getPortalObject()
-        portal_url = self.portal.absolute_url()
-        # portal_url = self.portal.portal_url()
         # self.types = getUtility(ITypesTool)
-        self.view_url = '{0}/@@{1}'.format(portal_url , self.__name__)
+        self.view_url = '{0}/@@{1}'.format(self.context.absolute_url() , self.__name__)
         self.types = getToolByName(self.context, 'portal_types')
         self.catalog = getToolByName(self.context, 'portal_catalog')
         self.filter_provides = 'Products.CMFCore.interfaces._content.IContentish'
@@ -80,5 +77,5 @@ class SiteStructureView(BrowserView):
         return self.mybrainsitem_template(type=type , state=state , id=id , level=level , url=url , title=title)
 
     def render(self):
-        # return self.walker_next(self.portal , -1)
+        # return self.walker_next(self.context , -1)
         return self.index()

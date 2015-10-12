@@ -10,6 +10,7 @@
     <!-- Plone 4.1 compatability -->
     <include package="Products.CMFCore"  file="permissions.zcml" />
 
+<!-- IApplication -->
     <!-- @@prime-app-global -->
     <browser:page
         name="prime-app-global"
@@ -34,10 +35,11 @@
         template="templates/sitestatus-view.pt"
         permission="zope2.View" />
 
+<!-- ISiteRoot -->
     <!-- @@sitestructure -->
     <browser:page
         name="sitestructure"
-        for="Products.CMFCore.interfaces._content.ISiteRoot"
+        for="Products.CMFCore.interfaces._content.IDynamicType"
         class=".viewstructure.SiteStructureView"
         template="templates/sitestructure-view.pt"
         permission="zope2.View" />
