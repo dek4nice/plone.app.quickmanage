@@ -1,14 +1,15 @@
+
 <div class="sitestructure-item row">
     <!-- {'review_state': 'published', 'meta_type': 'ATDocument', 'portal_type': 'Document', 'getId': 'front-page'} -->
 
-    <span class="btn-group btn-group-sm">
-        <a tal:attributes="href string:${options/url}/@@sitestructure;" class="btn btn-primary">
+    <span class="btn-group">
+        <a tal:attributes="href string:${options/url}/@@sitestructure;" class="btn btn-primary disabled">
             <span class="glyphicon glyphicon-triangle-right"></span>
             node
         </a>
-        <a tal:attributes="href string:${options/url}/folder_contents; class python: options['isfolder'] and 'btn btn-default' or 'btn btn-default disabled'" target="_blank">
+        <a tal:attributes="href string:${options/url}/folder_contents; class python: view.isFolder and 'btn btn-default' or 'btn btn-default disabled'" target="_blank">
             <span class="glyphicon glyphicon-sort-by-attributes"></span>
-            fcnt
+            contents
         </a>
         <a tal:attributes="href string:${options/url}/" class="btn btn-default" target="_blank">
             <span class="glyphicon glyphicon-eye-open"></span>
@@ -19,32 +20,23 @@
             edit
         </a>
     </span>
-    <span class="btn-group btn-group-sm">
+    <span class="btn-group">
         <a tal:attributes="href string:${options/url}/manage_workspace" class="btn btn-default" target="_blank">
             <span class="glyphicon glyphicon-cog"></span>
-            mng
+            manage
         </a>
         <a tal:attributes="href string:${options/url}/manage_interfaces" class="btn btn-default" target="_blank">
             <span class="glyphicon glyphicon-random"></span>
-            infc
+            interfaces
         </a>
         <a tal:attributes="href string:${options/url}/manage_access" class="btn btn-default" target="_blank">
             <span class="glyphicon glyphicon-sunglasses"></span>
-            scrt
+            security
         </a>
         <a tal:attributes="href string:${options/url}/manage_propertiesForm" class="btn btn-default" target="_blank">
             <span class="glyphicon glyphicon-list"></span>
-            prop
+            properties
         </a>
-    </span>
-
-    <span tal:content="options/level_string">
-        <tal:off replace="nothing">
-        <tal:level repeat="dummy python: range(options['level'])">
-            <span class="glyphicon glyphicon-option-vertical"></span>
-            <span class="glyphicon glyphicon-option-horizontal"></span>
-        </tal:level>
-        </tal:off>
     </span>
 
     <span>
@@ -53,7 +45,6 @@
 
     <span class="btn-group">
         <span class="sitestructure-item-type label label-warning" tal:content="options/type"></span>
-        <span class="sitestructure-item-state label label-default" tal:condition="options/state" tal:content="options/state"></span>
     </span>
 
 </div>

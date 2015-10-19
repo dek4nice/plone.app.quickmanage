@@ -1,4 +1,8 @@
-
+body {
+    /*font-family:'Open Sans';*/
+    font-size:12pt;
+    padding: 30px;
+}
 .sitestructure-header {
     color: #777777;
     margin-bottom: 1em;
